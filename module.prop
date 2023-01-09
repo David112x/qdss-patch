@@ -1,7 +1,7 @@
-id=MMT-Ex
-name=Magisk Module Template Extended
-version=v2.0
+id=qdss-patch
+name=Qualcomm Debug Subsystem patch
+version=v1.0
 versionCode=10
-author=Zackptg5
-description=Magisk Module Template Extended
+author=David112x
+description=A module that aims to fix QDSS on Android devices.
 updateJson=https://raw.githubusercontent.com/Zackptg5/MMT-Extended/master/update.json
