@@ -1,7 +1,6 @@
 id=qdss-patch
 name=Qualcomm Debug Subsystem patch
 version=v1.0
-versionCode=10
+versionCode=00010
 author=David112x
 description=A module that aims to fix QDSS on Android devices.
-updateJson=https://raw.githubusercontent.com/Zackptg5/MMT-Extended/master/update.json
