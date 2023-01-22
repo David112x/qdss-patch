@@ -1,3 +1,8 @@
+### 1.2 - 1.22.2023
+* This is a new release of the QDSS Patch, this release adds the following
+  * Added a bunch of binaries that might help on making DIAG work (vendor/bin)
+
+
 ### 1.1 - 1.22.2023
 * This is a new release of the QDSS Patch, this added the following
   * Added a few binaries and libraries related to DIAG in system_ext
