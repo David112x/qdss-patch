@@ -1,3 +1,10 @@
+### 1.3 - 1.23.2023
+* This is a new release of the QDSS Patch, this release has the following changes
+  * Seperated "QTIDiagServices.apk" from the main module to try and fix that the app wouldn't show in the "pm" command when listing packages
+  * Added even more binaries, most of which are related to the factory test mode in the modem, next release will include any missing libraries
+  * Removed some framework files that might be causing "Qualcomm HS-USB Diagnostics" to not work properly or any of the USB modes that the module is supposed try and support.
+
+
 ### 1.2 - 1.22.2023
 * This is a new release of the QDSS Patch, this release adds the following
   * Added a bunch of binaries that might help on making DIAG work (vendor/bin)
