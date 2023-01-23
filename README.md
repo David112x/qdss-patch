@@ -1,4 +1,4 @@
-<h1 align="center">Qualcomm Debug Subsystem Patch</h1>
+<h1 align="center">QTI Diag Services </h1>
 
 <div align="center">
   <!-- Version -->
@@ -6,5 +6,5 @@
       alt="_time_stamp_" /></div>
 
 <div align=center>
-This module aims to restore the Qualcomm debug systems unused in Android devices powered by Qualcomm SoCs. 
+This module will install "com.qti.diagservices" into system_ext systemlessly, use with the QDSS patch if your device does not have this app by default.
 </div>
