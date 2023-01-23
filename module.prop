@@ -1,6 +1,6 @@
 id=qdss-patch
 name=Qualcomm Debug Subsystem patch
-version=v1.2
-versionCode=00014
+version=v1.3
+versionCode=00016
 author=David112x
 description=A module that aims to fix QDSS on Android devices powered by Qualcomm SoCs.
