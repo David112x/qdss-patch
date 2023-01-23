@@ -41,6 +41,8 @@ REPLACE="
 ##########################################################################################
 
 set_permissions() {
+    set_perm_recursive $MODPATH/system/lib 0 0 0755 0644
+    set_perm_recursive $MODPATH/system/lib64 0 0 0755 0644
     set_perm_recursive $MODPATH/system/vendor 0 0 0755 0644
     set_perm_recursive $MODPATH/system/vendor/bin 0 0 0755 0755
     set_perm_recursive $MODPATH/system/vendor/lib 0 0 0755 0644
