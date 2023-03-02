@@ -3,7 +3,6 @@
   * Enable experimental support for specific platforms including SDM660, all the SoCs based on it (to my knowledge), SM8150 and all the SoCs based on it.
   * Use placeholder files to remove anything that might conflict with the new init scripts with the correct USB compositions.
   * Add more init scripts.
-  * Symlink binaries from /vendor/bin and /system_ext/bin to /system/bin
   * Add system.prop to disable props related to one of the new init scripts.
 
 ### 1.3 - 1.23.2023
