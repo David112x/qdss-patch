@@ -36,17 +36,54 @@ REPLACE_EXAMPLE="
 REPLACE="
 "
 
+
+##########################################################################################
+# Custom install commands
+##########################################################################################
+
+copy() {
+  if [ $PLATFORM == "sm6150" ]; then
+    ui_print "- Installing files for supported platform... $PLATFORM"
+    cp $MODPATH/init_files/sm8150/*.rc $MODPATH/system/vendor/etc/init/hw/
+    finish
+  elif [ $PLATFORM == "msmnile" ]; then
+    ui_print "- Installing files for supported platform... $PLATFORM"
+    cp $MODPATH/init_files/sm8150/*.rc $MODPATH/system/vendor/etc/init/hw/
+    finish
+  elif [ $PLATFORM == "sdm660" ]; then
+    ui_print "- Installing files for supported platform... $PLATFORM"
+    cp $MODPATH/init_files/sdm660/*.rc $MODPATH/system/vendor/etc/init/hw/
+    finish
+  elif [ $PLATFORM == "trinket" ]; then
+    ui_print "- Installing files for supported platform... $PLATFORM"
+    # Since trinket/NICOBAR is based on SDM660, we'll use that SoCs init files.
+    cp $MODPATH/init_files/sdm660/*.rc $MODPATH/system/vendor/etc/init/hw/
+    finish
+  else
+    ui_print "- Unsupported platform, installing generic files..."
+    cp $MODPATH/init_files/Generic/*.rc $MODPATH/system/vendor/etc/init/hw/
+    finish
+  fi
+}
+
+finish() {
+  touch $MODPATH/auto_mount
+  cp $MODPATH/init_files/Standard/*.rc $MODPATH/system/vendor/etc/init/hw/
+}
+
 ##########################################################################################
 # Permissions
 ##########################################################################################
 
 set_permissions() {
+    set_perm_recursive $MODPATH/system/bin 0 0 0755 0755
     set_perm_recursive $MODPATH/system/lib 0 0 0755 0644
     set_perm_recursive $MODPATH/system/lib64 0 0 0755 0644
     set_perm_recursive $MODPATH/system/vendor 0 0 0755 0644
     set_perm_recursive $MODPATH/system/vendor/bin 0 0 0755 0755
     set_perm_recursive $MODPATH/system/vendor/lib 0 0 0755 0644
     set_perm_recursive $MODPATH/system/vendor/lib64 0 0 0755 644
+    set_perm_recursive $MODPATH/system/vendor/etc 0 0 0755 644
     set_perm_recursive $MODPATH/system/product 0 0 0755 0644
     set_perm_recursive $MODPATH/system/system_ext 0 0 0755 0644
     set_perm_recursive $MODPATH/system/system_ext/bin 0 0 0755 0755

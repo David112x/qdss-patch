@@ -1,0 +1,7 @@
+# Disable logging for DIAG and disable bluetooth logging (to avoid issues)
+persist.vendor.sys.modem.diag.mdlog=false
+vendor.sys.modem.diag.mdlog=false
+persist.vendor.sys.cnss.diag_qxdm=false
+persist.vendor.sys.cnss.diag_txt=false
+ro.vendor.bluetooth.ftm_enabled=false
+persist.bluetooth.btsnoopenable=false
